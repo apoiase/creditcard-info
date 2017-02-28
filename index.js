@@ -2,9 +2,6 @@
 var luhn = require("luhn");
 var _ = require("lodash");
 
-module.exports = function (number) {
-
-};
 
 var CredircardInfo = function(number) {
 
