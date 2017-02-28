@@ -6,8 +6,9 @@
   "scripts": {
     "test": "mocha --ui tdd",
     "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify  index.js --standalone CredircardInfo -o client/bundle.js",
-    "watch": "node_modules/.bin/watchify index.js -o client/bundle.js --debug --verbose"
+    "build": "node_modules/.bin/browserify  index.js --standalone CredircardInfo -o dist/creditcard-info.js",
+    "build-min": "uglifyjs dist/creditcard-info.js > dist/creditcard-info.min.js",
+    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-info.js --debug --verbose"
   },
   "author": {
     "name": "Ariel Pchara",
@@ -34,6 +35,7 @@
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0",
     "testling": "^1.7.1",
+    "uglify-js": "^2.8.1",
     "watchify": "^3.9.0"
   },
   "testling": {
