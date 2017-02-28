@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --ui tdd",
     "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify index.js -o client/bundle.js",
+    "build": "node_modules/.bin/browserify  index.js --standalone CredircardInfo -o client/bundle.js",
     "watch": "node_modules/.bin/watchify index.js -o client/bundle.js --debug --verbose"
   },
   "author": {
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "browserify": "^14.1.0",
+    "expect.js": "^0.3.1",
     "mocha": "^3.2.0",
     "testling": "^1.7.1",
     "watchify": "^3.9.0"
