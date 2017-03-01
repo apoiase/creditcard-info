@@ -1,14 +1,14 @@
 {
-  "name": "apoiase-creditcard",
+  "name": "creditcard-warder",
   "version": "0.2.6",
   "description": "Rules from credit card from Brazil",
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui tdd",
     "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify  index.js --standalone ApoiaseCreditcard -o dist/creditcard-apoiase.js | npm run build-min",
-    "build-min": "uglifyjs dist/creditcard-info.js -o dist/creditcard-apoiase.min.js --compress",
-    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-apoiase.js --debug --verbose"
+    "build": "node_modules/.bin/browserify  index.js --standalone CreditcardWarder -o dist/creditcard-warder.js && npm run build-min",
+    "build-min": "uglifyjs dist/creditcard-warder.js -o dist/creditcard-warder.min.js --compress",
+    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-warder.js --debug --verbose"
   },
   "contributors": [
     {
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:apoiase/creditcard-info.git"
+    "url": "git@github.com:apoiase/creditcard-warder.git"
   },
   "keywords": [
     "creditcard",
