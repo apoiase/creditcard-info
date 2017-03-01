@@ -1,23 +1,28 @@
 {
-  "name": "creditcard-info",
+  "name": "apoiase-creditcard",
   "version": "0.2.6",
   "description": "Rules from credit card from Brazil",
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui tdd",
     "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify  index.js --standalone CreditcardInfo -o dist/creditcard-info.js | npm run build-min",
-    "build-min": "uglifyjs dist/creditcard-info.js -o dist/creditcard-info.min.js --compress",
-    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-info.js --debug --verbose"
+    "build": "node_modules/.bin/browserify  index.js --standalone ApoiaseCreditcard -o dist/creditcard-apoiase.js | npm run build-min",
+    "build-min": "uglifyjs dist/creditcard-info.js -o dist/creditcard-apoiase.min.js --compress",
+    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-apoiase.js --debug --verbose"
   },
-  "author": {
-    "name": "Ariel Pchara",
-    "email": "ariel@pchara.com",
-    "url": "http://ariel.pchara.com"
-  },
+  "contributors": [
+    {
+      "name": "Ariel Pchara",
+      "email": "ariel@pchara.com",
+      "url": "http://ariel.pchara.com"
+    }, {
+      "name": "David Basilio",
+      "email": "dbasilioesp@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:arielpchara/credircard-info.git"
+    "url": "git@github.com:apoiase/creditcard-info.git"
   },
   "keywords": [
     "creditcard",
