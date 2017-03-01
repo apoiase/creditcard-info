@@ -1,5 +1,5 @@
 {
-  "name": "apoiase-creditcard",
+  "name": "creditcard-warder",
   "description": "Rules from credit card from Brazil",
   "main": "dist/creditcard-warder.js",
   "authors": [
@@ -13,7 +13,7 @@
     "brazilian",
     "brands"
   ],
-  "homepage": "https://github.com/apoiase/creditcard-info",
+  "homepage": "https://github.com/apoiase/creditcard-warder",
   "ignore": [
     "**/.*",
     "node_modules",
