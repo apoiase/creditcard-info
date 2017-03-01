@@ -41,8 +41,8 @@ card.validate(); // true
 
 #### Usage in browser with browserify
 Links:
-- [creditcard-warder.js](https://raw.githubusercontent.com/apoiase/creditcard-info/gh-pages/dist/creditcard-warder.js)
-- [creditcard-warder.min.js](https://raw.githubusercontent.com/apoiase/creditcard-info/gh-pages/dist/creditcard-warder.min.js)
+- [creditcard-warder.js](https://raw.githubusercontent.com/apoiase/creditcard-warder/gh-pages/dist/creditcard-warder.js)
+- [creditcard-warder.min.js](https://raw.githubusercontent.com/apoiase/creditcard-warder/gh-pages/dist/creditcard-warder.min.js)
 
 #### Build with browserify
 ```
