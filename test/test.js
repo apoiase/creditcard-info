@@ -1,13 +1,13 @@
 var assert = require('assert');
 var expect = require('expect.js');
 
-var CredircardInfo = require('../index.js');
+var CreditcardWarder = require('../index.js');
 
 describe('Creditcards', function() {
-    var validCard = CredircardInfo('4024007175430676');
+    var validCard = CreditcardWarder('4024007175430676');
     var invalidCards = {
-        filledOne: CredircardInfo('1111111111111111'),
-        filledLetters: CredircardInfo('AAACCCEEEDDDFFFZZ')
+        filledOne: CreditcardWarder('1111111111111111'),
+        filledLetters: CreditcardWarder('AAACCCEEEDDDFFFZZ')
     };
 
     describe('Brands', function() {
@@ -22,6 +22,10 @@ describe('Creditcards', function() {
         it('should return other when card number be invalid with letters.', function() {
             expect(invalidCards.filledLetters.getBrand()).to.be.equal("other");
         });
+
+        it('should return other when card number be empty.', function() {
+            expect(CreditcardWarder('').getBrand()).to.be.equal("other");
+        });
     });
 
     describe('Luhn Algorithm', function(){
@@ -35,6 +39,18 @@ describe('Creditcards', function() {
 
         it('should fail validation when passed letters', function(){
             expect(invalidCards.filledLetters.validate()).not.be.ok()
+        });
+    });
+
+    describe('Rule', function() {
+        it('should return rule other when card number be empty.', function() {
+            var rule = CreditcardWarder().getRule();
+            expect(rule.type).to.be.equal("other");
+        });
+
+        it('should return rule other when card number be empty string.', function() {
+            var rule = CreditcardWarder('').getRule();
+            expect(rule.type).to.be.equal("other");
         });
     });
 });
