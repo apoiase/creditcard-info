@@ -90,19 +90,17 @@ var CredircardInfo = function(number) {
 
 CredircardInfo.prototype.getRule = function () {
     var self = this;
-    return _(self.rules).find( function(rule) {
+    
+    var other = _(self.rules).find({type: 'other'});
+    var rule = _(self.rules).find( function(rule) {
       return rule.pattern.test( self.number );
     });
+    
+    return rule ? rule : other; 
 };
 
 CredircardInfo.prototype.getBrand = function () {
-    var rule = this.getRule();
-    
-    if (rule) {
-        return rule.type;
-    } else {
-        return 'other';
-    }
+    return this.getRule().type;
 };
 
 CredircardInfo.prototype.validate = function () {
