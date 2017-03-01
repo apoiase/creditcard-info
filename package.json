@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha --ui tdd",
     "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify  index.js --standalone CredircardInfo -o dist/creditcard-info.js",
-    "build-min": "uglifyjs dist/creditcard-info.js > dist/creditcard-info.min.js",
+    "build": "node_modules/.bin/browserify  index.js --standalone CreditcardInfo -o dist/creditcard-info.js | npm run build-min",
+    "build-min": "uglifyjs dist/creditcard-info.js -o dist/creditcard-info.min.js --compress",
     "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-info.js --debug --verbose"
   },
   "author": {
