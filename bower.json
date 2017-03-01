@@ -1,0 +1,24 @@
+{
+  "name": "apoiase-creditcard",
+  "description": "Rules from credit card from Brazil",
+  "main": "dist/creditcard-warder.js",
+  "authors": [
+    "Ariel Pchara <ariel@pchara.com> (http://ariel.pchara.com)",
+    "David Basilio <dbasilioesp@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "creditcard",
+    "validations",
+    "brazilian",
+    "brands"
+  ],
+  "homepage": "https://github.com/apoiase/creditcard-info",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
