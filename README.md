@@ -18,6 +18,13 @@
 * Visa Electron
 * Maestro
 
+## Using like javascript library
+Links:
+- [creditcard-info.js](https://raw.githubusercontent.com/apoiase/creditcard-info/gh-pages/dist/creditcard-info.js)
+- [creditcard-info.min.js](https://raw.githubusercontent.com/apoiase/creditcard-info/gh-pages/dist/creditcard-info.min.js)
+
+## Using like npm package
+
 ```
 npm i creditcard-info
 ```
