@@ -4,7 +4,7 @@ var luhn = require("luhn");
 var _ = require("lodash");
 
 
-var CredircardInfo = function(number) {
+var CredircardWarder = function(number) {
     this.number = number;
 
     this.rules = [
@@ -52,7 +52,7 @@ var CredircardInfo = function(number) {
         }, {
             alias: 'master',
             type: 'mastercard',
-            pattern: /^5[0-5]/,
+            pattern: /^5[1-5]\d{14}$|^2(?:2(?:2[1-9]|[3-9]\d)|[3-6]\d\d|7(?:[01]\d|20))\d{12}$/,
             length: [16],
             cvcLength: [3]
         }, {
@@ -89,7 +89,7 @@ var CredircardInfo = function(number) {
     ];
 };
 
-CredircardInfo.prototype.getRule = function () {
+CredircardWarder.prototype.getRule = function () {
     var self = this;
     
     var other = _(self.rules).find({type: 'other'});
@@ -100,17 +100,17 @@ CredircardInfo.prototype.getRule = function () {
     return rule ? rule : other; 
 };
 
-CredircardInfo.prototype.getBrand = function () {
+CredircardWarder.prototype.getBrand = function () {
     return this.getRule().type;
 };
 
-CredircardInfo.prototype.validate = function () {
+CredircardWarder.prototype.validate = function () {
     return luhn.validate(this.number);
 };
 
 
 module.exports = function (number) {
-    return new CredircardInfo(number);
+    return new CredircardWarder(number);
 };
 
 },{"lodash":2,"luhn":3}],2:[function(require,module,exports){
