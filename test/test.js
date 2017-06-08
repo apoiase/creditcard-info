@@ -26,6 +26,33 @@ describe('Creditcards', function() {
         it('should return other when card number be empty.', function() {
             expect(CreditcardWarder('').getBrand()).to.be.equal("other");
         });
+        it('should return master brand', function() {
+            assert.equal("mastercard", CreditcardWarder('5141581454983717').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2300000000000003').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2221009999999999').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2234009999999999').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2321009999999999').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2499999999999999').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2720999999999999').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5100000000000000').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5255555555555555').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5444444444444444').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5555555555555555').getBrand());
+        });
+        it('should not return mater brand', function(){
+            assert.notEqual("mastercard", CreditcardWarder('1221009999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2121009999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2211009999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2220009999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2721009999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2721999999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2730999999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('2820999999999999').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('4111111111111111').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('5055555555555555').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('5600000000000000').getBrand());
+            assert.notEqual("mastercard", CreditcardWarder('5911111111111111').getBrand());
+        });
     });
 
     describe('Luhn Algorithm', function(){
