@@ -1,6 +1,6 @@
 {
   "name": "creditcard-warder",
-  "version": "0.2.9",
+  "version": "0.3.9",
   "description": "Rules from credit card from Brazil",
   "main": "index.js",
   "scripts": {
