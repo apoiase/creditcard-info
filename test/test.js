@@ -38,7 +38,16 @@ describe('Creditcards', function() {
             assert.equal("mastercard", CreditcardWarder('5255555555555555').getBrand());
             assert.equal("mastercard", CreditcardWarder('5444444444444444').getBrand());
             assert.equal("mastercard", CreditcardWarder('5555555555555555').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2221005555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2222005555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('2720995555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5153295555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5321655555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5547845555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5413515555555459').getBrand());
+            assert.equal("mastercard", CreditcardWarder('5436275555555459').getBrand());
         });
+
         it('should not return mater brand', function(){
             assert.notEqual("mastercard", CreditcardWarder('1221009999999999').getBrand());
             assert.notEqual("mastercard", CreditcardWarder('2121009999999999').getBrand());
