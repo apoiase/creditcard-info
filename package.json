@@ -1,6 +1,6 @@
 {
   "name": "creditcard-warder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rules from credit card from Brazil",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.10.1",
+    "lodash.find": "^4.6.0",
     "luhn": "^2.1.0"
   },
   "devDependencies": {

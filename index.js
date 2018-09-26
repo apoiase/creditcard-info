@@ -1,5 +1,5 @@
 var luhn = require('luhn');
-var _ = require('lodash');
+var find = require('lodash.find');
 
 var CredircardWarder = function (number) {
   this.number = number;
@@ -88,8 +88,8 @@ var CredircardWarder = function (number) {
 CredircardWarder.prototype.getRule = function () {
   var self = this;
 
-  var other = _(self.rules).find({type: 'other'});
-  var rule = _(self.rules).find(function (rule) {
+  var other = find(self.rules, {type: 'other'});
+  var rule = find(self.rules, function (rule) {
     return rule.pattern.test(self.number);
   });
 
