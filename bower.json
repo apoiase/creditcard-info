@@ -1,10 +1,11 @@
 {
   "name": "creditcard-warder",
   "description": "Rules from credit card from Brazil",
-  "main": "dist/creditcard-warder.js",
+  "main": "dist/creditcard-warder.min.js",
   "authors": [
     "Ariel Pchara <ariel@pchara.com> (http://ariel.pchara.com)",
-    "David Basilio <dbasilioesp@gmail.com"
+    "David Basilio <dbasilioesp@gmail.com>",
+    "Filipe Linhares <filipelinhares@outlook.com> (http://filipelinhares.com)",
   ],
   "license": "MIT",
   "keywords": [

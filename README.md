@@ -1,3 +1,6 @@
+# creditcard-warder
+
+![Version badge](http://img.badgesize.io/apoiase/creditcard-warder/refactor/dist/creditcard-warder.min.js.svg)
 
 ## About
 
@@ -13,15 +16,15 @@ npm install creditcard-warder --save
 ## Credit Card Brands
 
 #### Globals
-* visa
-* master
-* amex
-* dinersclub
-* discover
-* unionpay
-* jcb
-* forbrugsforeningen
-* dankort
+* Visa
+* Mastercard
+* Amex
+* Dinersclub
+* Discover
+* Unionpay
+* JCB
+* Forbrugsforeningen
+* Dankort
 
 #### Brazil
 * ELO
@@ -41,9 +44,8 @@ card.validate(); // true
 ```
 
 #### Usage in browser with browserify
-Links:
-- [creditcard-warder.js](https://raw.githubusercontent.com/apoiase/creditcard-warder/gh-pages/dist/creditcard-warder.js)
-- [creditcard-warder.min.js](https://raw.githubusercontent.com/apoiase/creditcard-warder/gh-pages/dist/creditcard-warder.min.js)
+CDN latest version:
+- [creditcard-warder.min.js](https://unpkg.com/creditcard-warder)
 
 #### Build with browserify
 ```
