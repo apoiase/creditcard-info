@@ -4,11 +4,10 @@
   "description": "Rules from credit card from Brazil",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --ui tdd",
-    "test-browser": "node_modules/.bin/testling",
-    "build": "node_modules/.bin/browserify  index.js --standalone CreditcardWarder -o dist/creditcard-warder.js && npm run build-min",
-    "build-min": "uglifyjs dist/creditcard-warder.js -o dist/creditcard-warder.min.js --compress",
-    "watch": "node_modules/.bin/watchify index.js -o dist/creditcard-warder.js --debug --verbose"
+    "test": "xo && mocha --ui tdd",
+    "test-browser": "testling",
+    "build": "rollup --config",
+    "watch": "rollup --config --watch"
   },
   "contributors": [
     {
@@ -37,12 +36,11 @@
     "luhn": "^2.1.0"
   },
   "devDependencies": {
-    "browserify": "^14.1.0",
-    "expect.js": "^0.3.1",
     "mocha": "^3.2.0",
+    "rollup": "^0.66.2",
+    "rollup-plugin-uglify": "^6.0.0",
     "testling": "^1.7.1",
-    "uglify-js": "^2.8.1",
-    "watchify": "^3.9.0"
+    "xo": "^0.23.0"
   },
   "testling": {
     "harness": "mocha",
