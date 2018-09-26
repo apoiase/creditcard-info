@@ -92,11 +92,11 @@ CredircardWarder.prototype.getRule = function () {
   var self = this;
 
   var other = _(self.rules).find({type: 'other'});
-  var rule = _(self.rules).find( function(rule) {
-    return rule.pattern.test( self.number );
+  var rule = _(self.rules).find(function (rule) {
+    return rule.pattern.test(self.number);
   });
 
-  return rule ? rule : other; 
+  return rule ? rule : other;
 };
 
 CredircardWarder.prototype.getBrand = function () {
@@ -107,8 +107,6 @@ CredircardWarder.prototype.validate = function () {
   return luhn.validate(this.number);
 };
 
-
 module.exports = function (number) {
   return new CredircardWarder(number);
 };
-
