@@ -1,15 +1,12 @@
+var luhn = require('luhn');
+var _ = require('lodash');
 
-var luhn = require("luhn");
-var _ = require("lodash");
-
-
-var CredircardWarder = function(number) {
+var CredircardWarder = function (number) {
   this.number = number;
-
   this.rules = [
     {
       type: 'elo',
-      pattern: /^(((40117[89])|(431274)|(438935)|(451416)|(457393)|(45763[12])|(504175)|(627780)|(636297)|(636368)|(65500[0-3])|(65165[2-4])|(65048[5-8])|(650489|65049[0-4])|(506699|5067[0-6][0-9]|50677[0-8])|(509[0-8][0-9]{2}|5099[0-8][0-9]|50999[0-9])|(65003[1-3])|(65003[5-9]|65004[0-9]|65005[01])|(65040[5-9]|6504[1-3][0-9])|(65048[5-9]|65049[0-9]|6505[0-2][0-9]|65053[0-8])|(65054[1-9]|6505[5-8][0-9]|65059[0-8])|(65070[0-9]|65071[0-8])|(65072[0-7])|(65090[1-9]|65091[0-9]|650920)|(65165[2-9]|6516[67][0-9])|(65500[0-9]|65501[0-9])|(65502[1-9]|6550[34][0-9]|65505[0-8]))\d{0,16})$/,
+      pattern: /^(4011(78|79)|43(1274|8935)|45(1416|7393|763(1|2))|50(4175|6699|67[0-7]\d|9000)|50(9\d\d\d)|627780|63(6297|6368)|650(03([^4])|04(\d)|05(0|1)|05([7-9])|06(\d)|07(\d)|08(\d)|4([0-3]\d|8[5-9]|9\d)|5(\d\d|3[0-8])|9([0-6]\d|7[0-8])|7([0-2]\d)|541|700|720|727|901)|65165([2-9])|6516([6-7]\d)|65500(\d)|6550([0-5]\d)|655021|65505([6-7])|6516([8-9]\d)|65170([0-4]))/,
       length: [16],
       cvcLength: [3]
     }, {
@@ -51,7 +48,7 @@ var CredircardWarder = function(number) {
     }, {
       alias: 'master',
       type: 'mastercard',
-      pattern: /(?:(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12})/,
+      pattern: /(?:(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12})/,
       length: [16],
       cvcLength: [3]
     }, {
@@ -61,7 +58,7 @@ var CredircardWarder = function(number) {
       cvcLength: [3, 4]
     }, {
       type: 'dinersclub',
-      pattern: /^(?:3(?:0[0-5]|[68][0-9])[0-9]{11})$/,
+      pattern: /^(?:3(?:0[0-5]|[68]\d)\d{11})$/,
       length: [14],
       cvcLength: [3]
     }, {
@@ -92,11 +89,11 @@ CredircardWarder.prototype.getRule = function () {
   var self = this;
 
   var other = _(self.rules).find({type: 'other'});
-  var rule = _(self.rules).find( function(rule) {
-    return rule.pattern.test( self.number );
+  var rule = _(self.rules).find(function (rule) {
+    return rule.pattern.test(self.number);
   });
 
-  return rule ? rule : other; 
+  return rule ? rule : other;
 };
 
 CredircardWarder.prototype.getBrand = function () {
@@ -107,8 +104,6 @@ CredircardWarder.prototype.validate = function () {
   return luhn.validate(this.number);
 };
 
-
 module.exports = function (number) {
   return new CredircardWarder(number);
 };
-
