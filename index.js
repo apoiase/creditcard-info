@@ -48,7 +48,7 @@ var CredircardWarder = function (number) {
     }, {
       alias: 'master',
       type: 'mastercard',
-      pattern: /(?:(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12})/,
+      pattern: /(?:(?:5[1-5]\d{2}|222[1-9]|22[3-9]\d|2[3-6]\d{2}|27[01]\d|2720)\d{12})/,
       length: [16],
       cvcLength: [3]
     }, {
@@ -58,7 +58,7 @@ var CredircardWarder = function (number) {
       cvcLength: [3, 4]
     }, {
       type: 'dinersclub',
-      pattern: /^(?:3(?:0[0-5]|[68][0-9])[0-9]{11})$/,
+      pattern: /^(?:3(?:0[0-5]|[68]\d)\d{11})$/,
       length: [14],
       cvcLength: [3]
     }, {

@@ -51,5 +51,13 @@
       "chrome/latest",
       "firefox/latest"
     ]
+  },
+  "xo": {
+    "esnext": false,
+    "space": true,
+    "envs": [
+      "node",
+      "mocha"
+    ]
   }
 }
