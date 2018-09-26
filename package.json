@@ -43,6 +43,8 @@
   "devDependencies": {
     "mocha": "^3.2.0",
     "rollup": "^0.66.2",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-uglify": "^6.0.0",
     "testling": "^1.7.1",
     "xo": "^0.23.0"
