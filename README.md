@@ -1,6 +1,6 @@
 # creditcard-warder
 
-![Version badge](http://img.badgesize.io/apoiase/creditcard-warder/refactor/dist/creditcard-warder.min.js.svg)
+![Size badge](http://img.badgesize.io/apoiase/creditcard-warder/master/dist/creditcard-warder.min.js.svg) ![Version badge](https://img.shields.io/npm/v/creditcard-warder.svg)
 
 ## About
 
