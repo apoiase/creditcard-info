@@ -87,7 +87,6 @@ var CredircardWarder = function (number) {
 
 CredircardWarder.prototype.getRule = function () {
   var self = this;
-
   var other = find(self.rules, {type: 'other'});
   var rule = find(self.rules, function (rule) {
     return rule.pattern.test(self.number);

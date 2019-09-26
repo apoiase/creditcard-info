@@ -21,7 +21,7 @@ describe('Creditcards', function () {
       assert.strictEqual(creditcardWarder('').getBrand(), 'other');
     });
 
-    it('should return "Visa" when passed 4024007175430676', function () {
+    it('should return "Visa" when passed 4024007175430676.', function () {
       assert.strictEqual('visa', validCard.getBrand());
     });
 

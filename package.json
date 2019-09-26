@@ -22,7 +22,12 @@
     {
       "name": "Filipe Linhares",
       "email": "filipelinhares@outlook.com",
-      "url": "http:/filipelinhares.com"
+      "url": "http://filipelinhares.com"
+    },
+    {
+      "name": "Pedro Cardoso da Silva",
+      "email": "forsureitsme@gmail.com",
+      "url": "https://github.com/forsureitsme"
     }
   ],
   "repository": {

@@ -27,11 +27,12 @@ npm install creditcard-warder --save
 * Dankort
 
 #### Brazil
-* ELO
 * Hipercard
 * Aura
 * Visa Electron
 * Maestro
+
+among others.
 
 ## Usage
 
@@ -39,7 +40,7 @@ npm install creditcard-warder --save
 var creditcard = require('creditcard-warder');
 
 var card = creditcard('4514166365215946')
-card.getBrand(); // elo
+card.getBrand(); // forbrugsforeningen
 card.validate(); // true
 ```
 

@@ -1,7 +1,7 @@
 var uglify = require('rollup-plugin-uglify').uglify;
 var commonjs = require('rollup-plugin-commonjs');
 var nodeResolve = require('rollup-plugin-node-resolve');
-
+//
 module.exports = {
   input: './index.js',
   output: {
