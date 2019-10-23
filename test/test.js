@@ -65,24 +65,18 @@ describe('Creditcards', function () {
     it('should return "ELO" brand', function () {
       assert.strictEqual('elo', creditcardWarder('6363680235079446').getBrand());
       assert.strictEqual('elo', creditcardWarder('5067017087967751').getBrand());
-      assert.strictEqual('elo', creditcardWarder('6362970000457013').getBrand());
-      assert.strictEqual('elo', creditcardWarder('5066991111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090481111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090671111111118').getBrand());
-      assert.strictEqual('elo', creditcardWarder('5090491111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090691111111118').getBrand());
-      assert.strictEqual('elo', creditcardWarder('5090501111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090741111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090681111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090401111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090451111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090511111111118').getBrand());
-      assert.strictEqual('elo', creditcardWarder('5090461111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090661111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090471111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090421111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090521111111118').getBrand());
-      assert.strictEqual('elo', creditcardWarder('5090431111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090641111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090401111111118').getBrand());
       assert.strictEqual('elo', creditcardWarder('5090481111111118').getBrand());
