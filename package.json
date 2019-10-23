@@ -52,7 +52,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-uglify": "^6.0.0",
     "testling": "^1.7.1",
-    "xo": "^0.23.0"
+    "xo": "0.15.0"
   },
   "testling": {
     "harness": "mocha",
